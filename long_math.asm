@@ -1,9 +1,3 @@
-Num1	.ds 4		// mul, div
-Num2	.ds 4		// mul
-Num3	.ds 8		// mul
-Remainder	.ds 4	// div
-Dividend	.ds 4   // div
-
 mda 	.macro " "	; 32-bit move
 	.if .not [:0 = 4]
 		.error 'Wrong Number of Arguments!'
@@ -27,6 +21,15 @@ mda 	.macro " "	; 32-bit move
 		.endif
 	.endif
 	.endm
+
+
+.local math
+Num1	.ds 4		// mul, div
+Num2	.ds 4		// mul
+Num3	.ds 8		// mul
+Remainder	.ds 4	// div
+Dividend	.ds 4   // div
+
 
 // examples: 
 // sbl a_dw b_dw (result in a_dw) 
@@ -256,3 +259,4 @@ skip1
 	rts
 	.endp
 	
+.endl
